@@ -1,0 +1,26 @@
+<tr></tr>
+<table border="1">
+
+	<tr>
+		<td bgcolor="#00FF00">CI</td>
+		<td  bgcolor="#00FF00">NOMBRES</td>
+		<td  bgcolor="#00FF00">Email</td>
+		<td bgcolor="#00FF00">Flet</td>
+		<td bgcolor="#00FF00">Clases de Crecimiento</td>
+		<td bgcolor="#00FF00">Teléfono</td>
+		<td bgcolor="#00FF00">Celular</td>
+	</tr>
+{% for usuarios in usuarios %}
+<tr>
+	<td>{{usuarios.Usuario.username}}</td> 
+	<td>{{usuarios.Usuario.first_name}} {{usuarios.Usuario.last_name}}</td>
+	<td>{{usuarios.Usuario.email}}</td> 
+	<td>{{usuarios.Fletn.nivel}}</td> 
+	<td>{{usuarios.CC.nivel}}</td> 
+	<td>{{usuarios.Telefono}}</td> 
+	<td>{{usuarios.Celular}}</td> 
+	
+</tr>
+
+{% endfor %}
+</table>

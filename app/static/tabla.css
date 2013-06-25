@@ -1,0 +1,17 @@
+table{
+	font-size: 80%;
+	border: solid 1px black;
+	border-collapse:collapse;
+	text-align: center;
+	width: 50%;
+	background: white;
+}
+tr{
+
+}
+td{
+border: solid 1px black;	
+padding: 4px;
+
+}
+

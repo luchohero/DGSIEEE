@@ -1,0 +1,27 @@
+	
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock head %}
+
+{% block titulo %}IEEE  || {% endblock titulo %}
+
+{% block contenido %}
+
+    
+
+<form method="post">{% csrf_token %}
+	<label>Usuario {{dm}}</label>
+	{{formulario.as_p}}
+	
+<div class="btn-group">
+	<a class="btn" href="../list">Cancelar</a><input class="btn btn-primary" type="submit" value="{% block valor %}{% endblock valor %}" />
+</div>
+
+</form>
+
+
+
+
+{% endblock contenido %}

@@ -1,0 +1,41 @@
+	
+{% extends 'calendario/base.html' %}
+
+{% block head %}
+ 
+  {% endblock head %}
+{% block titulo %}IEEE{% endblock titulo %}
+
+{% block contenido %}
+
+
+
+
+{% for calendario in calendario %}
+
+	<table class="table table-bordered">
+	<tr>
+	<td>	
+	<h1>{{calendario.Titulo}}</h1>
+	<br>
+	
+	{{calendario.Contenido}}
+	<br>
+	Lugar<br>
+	{{calendario.Lugar}}
+	<br>
+	<span class="label label-info">Fecha: {{calendario.FechaI}}</span>
+	<span class="label label-success">Autor : {{calendario.Autor.first_name}} {{calendario.Autor.last_name}}</span>
+</td>
+</tr>
+	</table>
+
+
+{%endfor%}
+	
+
+
+{% endblock contenido %}
+{% block derecha%}
+
+{% endblock derecha %}

@@ -1,0 +1,25 @@
+	
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock head %}
+
+{% block titulo %}IEEE  || {% endblock titulo %}
+
+{% block contenido %}
+<div class="span9">
+<form method="post">{% csrf_token %}
+
+{{formularioestado.as_p}}
+
+	
+
+<div class="btn-group">
+	<a class="btn" href="../../add">Cancelar</a><input class="btn btn-primary" type="submit" value="Grabar" />
+</div>
+
+</form>
+</div>
+
+{% endblock contenido %}

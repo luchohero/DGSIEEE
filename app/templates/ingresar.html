@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock head %}
+
+{% block titulo %}IEEE  || {% endblock titulo %}
+
+{% block contenido %}
+{{mensaje}}
+	<form id='formulario' method='post' action=''>{% csrf_token %}
+		{{formulario_ing}}
+		<input type='submit' value='ingresar' />
+	</form>
+{% endblock contenido%}

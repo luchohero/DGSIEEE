@@ -1,0 +1,69 @@
+	
+<!Doctype html>
+<html lang="es">
+<head>
+	{% block head %}{% endblock head %}
+	<meta charset="utf-8" />
+	<title>{% block titulo %}{% endblock titulo %} | DGS</title>
+
+
+	<link rel="stylesheet" type="text/css" href="/static/bootstrap/css/bootstrap.css" />
+ 
+	
+
+</head>
+<body>
+	
+      <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" >Iglesia Esperanza Eterna</a>
+          <div class="nav-collapse collapse">
+            <p class="navbar-text pull-right">
+              Usuario : {{usuario.username}} <a href="/cerrar/" class="navbar-link">Salir</a>
+            </p>
+            <ul class="nav">
+              
+
+              <li class="active"><a href="/agenda/">AGENDA</a></li>
+              <li >{% if usuario.is_staff == True %}<a href="/">MANEJO</a>{%endif%}</li>
+              <li><a href="#contact"></a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    
+    <br><br><br><br>
+        <ul class="breadcrumb"></ul>
+        <div class="container-fluid">
+  
+  <div class="row-fluid">
+    <div class="span2">
+
+      <div class="alert alert-info">
+        Agenda Electrónica
+      </div>
+      <div class="alert alert-success">
+       Desarrollador de sistemas IEEE
+      </div>
+    </div>
+    <div class="span9">
+
+
+
+      {% block contenido %}{% endblock contenido %}
+    </div>
+     
+  <script src="/static/bootstrap/js/bootstrap-modal.js"></script>
+	<script src="/static/bootstrap/js/bootstrap.js"></script>
+
+	
+</body>
+</html>
